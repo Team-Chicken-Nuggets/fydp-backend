@@ -1,24 +1,45 @@
-# README
+<h1 align="center">
+  Pauze
+</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<div align="center">
+  <h4>
+    <a href="https://github.com/heathermusson/fydp-backend/commits/main"><img src="https://img.shields.io/github/last-commit/heathermusson/fydp-backend"/></a>
+    <a href="https://github.com/heathermusson/fydp-backend/issues"><img src="https://img.shields.io/github/issues-raw/heathermusson/fydp-backend"/></a>
+    <a href="https://github.com/heathermusson/fydp-backend/pulls"><img src="https://img.shields.io/github/issues-pr/heathermusson/fydp-backend"/></a>
+</div>
+<p><font size="3">
+Description here.</p>
 
-Things you may want to cover:
+# Usage
 
-* Ruby version
+## Requirements
 
-* System dependencies
+### Versions
+- Ruby 2.7.1
+- Rails 6.0.2
+- PostgreSQL
 
-* Configuration
+## Getting Started
 
-* Database creation
+### 1) Create the database
 
-* Database initialization
+```bash
+rake db:create
+```
 
-* How to run the test suite
+### 2) Install gems
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+bundle install
+```
 
-* Deployment instructions
+### 3) Start the server
 
-* ...
+```bash
+rails server
+```
+Now you can visit the site with the URL http://localhost:3000
+
+# Common Problems
+
