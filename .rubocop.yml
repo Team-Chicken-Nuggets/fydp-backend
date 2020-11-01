@@ -1,7 +1,7 @@
 require: 
   - rubocop-performance
   - rubocop-rails
-  - rubocop-rspec
+  # rubocop-rspec
 
 AllCops:
   Exclude:
@@ -9,9 +9,9 @@ AllCops:
     - 'script/**/*'
     - 'bin/**/*'
   NewCops: enable
-  
+
 Layout/LineLength:
-  Max: 100
+  Max: 120
 
 Metrics/MethodLength:
   Max: 1000
