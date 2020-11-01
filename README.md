@@ -41,5 +41,28 @@ rails server
 ```
 Now you can visit the site with the URL http://localhost:3000
 
+# Testing
+
+This repo uses `rspec` for testing. Learn more about it <a href="https://rspec.info/">here</a>. Tests can be found under `/spec/`. 
+
+## Running Specs
+
+```sh
+# Default: Run all spec files
+$ bundle exec rspec
+
+# Run all spec files in a single directory (recursively)
+$ bundle exec rspec spec/models
+
+# Run a single spec file
+$ bundle exec rspec spec/controllers/accounts_controller_spec.rb
+
+# Run a single example from a spec file (by line number)
+$ bundle exec rspec spec/controllers/accounts_controller_spec.rb:8
+
+# See all options for running specs
+$ bundle exec rspec --help
+```
+
 # Common Problems
 
