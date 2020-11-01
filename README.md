@@ -4,9 +4,9 @@
 
 <div align="center">
   <h4>
-    <a href="https://github.com/heathermusson/fydp-backend/commits/main"><img src="https://img.shields.io/github/last-commit/heathermusson/fydp-backend"/></a>
-    <a href="https://github.com/heathermusson/fydp-backend/issues"><img src="https://img.shields.io/github/issues-raw/heathermusson/fydp-backend"/></a>
-    <a href="https://github.com/heathermusson/fydp-backend/pulls"><img src="https://img.shields.io/github/issues-pr/heathermusson/fydp-backend"/></a>
+    <a href="https://github.com/Team-Chicken-Nuggets/fydp-backend/commits/main"><img src="https://img.shields.io/github/last-commit/Team-Chicken-Nuggets/fydp-backend"/></a>
+    <a href="https://github.com/Team-Chicken-Nuggets/fydp-backend/issues"><img src="https://img.shields.io/github/issues-raw/Team-Chicken-Nuggets/fydp-backend"/></a>
+    <a href="https://github.com/Team-Chicken-Nuggets/fydp-backend/pulls"><img src="https://img.shields.io/github/issues-pr/Team-Chicken-Nuggets/fydp-backend"/></a>
 </div>
 <p><font size="3">
 Description here.</p>
