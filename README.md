@@ -41,11 +41,17 @@ rails server
 ```
 Now you can visit the site with the URL http://localhost:3000
 
-# Testing
+# GraphQL
+
+Test your GraphQL queries at `/graphiql`.
+
+# Continuous Integration
+
+## Testing
 
 This repo uses `rspec` for testing. Learn more about it <a href="https://rspec.info/">here</a>. Tests can be found under `/spec/`. 
 
-## Running Specs
+### Running Specs
 
 ```sh
 # Default: Run all spec files
@@ -63,6 +69,16 @@ $ bundle exec rspec spec/controllers/accounts_controller_spec.rb:8
 # See all options for running specs
 $ bundle exec rspec --help
 ```
+
+## Linting
+
+This repo uses `rubocop` for linting. Learn more about it <a href="https://rubocop.org/">here</a>.
+
+### Usage
+- If you are using VSCode and install `ruby-rubocop` you files will be linted on save.
+- Lint all your files with `bundle exec rubocop`
+- Lint a specific file with `bundle exec rubocop file`
+- Lint several files with `bundle exec rubocop file1 file2 ...`
 
 # Common Problems
 
