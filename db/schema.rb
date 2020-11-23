@@ -10,10 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_11_034021) do
+ActiveRecord::Schema.define(version: 2020_11_23_160057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "courses", force: :cascade do |t|
+    t.string "identifier", null: false
+    t.string "term"
+    t.string "name", null: false
+    t.text "description", null: false
+    t.bigint "professor_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["professor_id"], name: "index_courses_on_professor_id"
+  end
+
+  create_table "enrollments", force: :cascade do |t|
+    t.bigint "course_id"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_id"], name: "index_enrollments_on_course_id"
+    t.index ["user_id"], name: "index_enrollments_on_user_id"
+  end
+
+  create_table "lectures", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description", null: false
+    t.string "video_link"
+    t.bigint "course_id"
+    t.bigint "user_id"
+    t.date "visible_on", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_id"], name: "index_lectures_on_course_id"
+    t.index ["user_id"], name: "index_lectures_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,9 +60,12 @@ ActiveRecord::Schema.define(version: 2020_11_11_034021) do
     t.datetime "authentication_token_created_at"
     t.string "first_name", null: false
     t.string "last_name", null: false
+    t.string "identifier"
+    t.string "role"
     t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "courses", "users", column: "professor_id"
 end
