@@ -50,3 +50,8 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # graphql-ruby
 gem 'graphql'
+
+# for user auth
+gem 'devise'
+gem 'devise-token_authenticatable'
+gem 'jwt'

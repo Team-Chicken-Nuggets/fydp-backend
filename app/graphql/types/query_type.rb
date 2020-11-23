@@ -1,15 +1,18 @@
 # frozen_string_literal: true
 
 module Types
-  class QueryType < Types::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+  class QueryType < GraphQL::Schema::Object
+    description 'The query root of this schema'
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-                               description: 'An example field added by the generator'
-    def test_field
-      'Hello World!'
+    # First describe the field signature:
+    field :user, UserType, null: true do
+      description 'Find a user by ID'
+      argument :id, ID, required: true
+    end
+
+    # Then provide an implementation:
+    def user(id:)
+      User.find(id)
     end
   end
 end
