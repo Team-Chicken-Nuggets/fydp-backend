@@ -8,4 +8,9 @@ class User < ApplicationRecord
          :database_authenticatable, :token_authenticatable
 
   validates :first_name, :last_name, presence: true
+
+  has_many :enrollments, dependent: :destroy
+  has_many :courses, through: :enrollments
+
+  has_many :teachings, class_name: 'Course', foreign_key: :professor_id, dependent: :destroy, inverse_of: :user
 end
