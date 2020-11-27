@@ -10,9 +10,27 @@ module Types
       argument :id, ID, required: true
     end
 
+    field :course, CourseType, null: true do
+      description 'Find a course by ID'
+      argument :id, ID, required: true
+    end
+
+    field :lecture, LectureType, null: true do
+      description 'Find a lecture by ID'
+      argument :id, ID, required: true
+    end
+
     # Then provide an implementation:
     def user(id:)
       User.find(id)
+    end
+
+    def course(id:)
+      Course.find(id)
+    end
+
+    def lecture(id:)
+      Lecture.find(id)
     end
   end
 end
