@@ -55,3 +55,5 @@ gem 'graphql'
 gem 'devise'
 gem 'devise-token_authenticatable'
 gem 'jwt'
+
+gem 'faker'
