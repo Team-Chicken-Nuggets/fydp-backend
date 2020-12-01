@@ -22,11 +22,15 @@ Description here.</p>
 
 ## Getting Started
 
-### 1) Create the database
+### 1) Setup the database
 
 ```bash
-rake db:create
+rails db:create
+rails db:migrate
+rails db:seed
 ```
+
+If you get an error, try `rails db:reset`.
 
 ### 2) Install gems
 
@@ -40,6 +44,7 @@ bundle install
 rails server
 ```
 Now you can visit the site with the URL http://localhost:3000
+
 
 # GraphQL
 
