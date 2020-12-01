@@ -8,6 +8,8 @@ module Types
     field :login_user, mutation: Mutations::LoginUser
     field :logout_user, mutation: Mutations::LogoutUser
     field :register_user, mutation: Mutations::RegisterUser
+    field :create_course, mutation: Mutations::CreateCourse
+    field :create_lecture, mutation: Mutations::CreateLecture
 
     def test_field
       'Hello World'
