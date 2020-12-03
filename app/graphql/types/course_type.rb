@@ -11,5 +11,6 @@ module Types
     field :professor, UserType, null: false
     # TODO: Change this field name to be students
     field :users, [UserType], null: false
+    field :lectures, [LectureType], null: true
   end
 end
