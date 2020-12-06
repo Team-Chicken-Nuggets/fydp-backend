@@ -18,8 +18,13 @@ module Mutations
     def register_user(args)
       user = User.create!(args)
 
-      # current_user needs to be set so authenticationToken can be returned
-      context[:current_user] = user
+      context[:cookies][:token] = {
+        value: user.authentication_token,
+        expires: 1.week.from_now,
+        domain: 'http://localhost:8080',
+        secure: true,
+        httponly: true
+      }
 
       {
         user: user
